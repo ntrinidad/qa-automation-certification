@@ -9,8 +9,10 @@ fixture('Login testing')
 	test.only('Trying to login with invalid credentials', async t => {
     await LoginPage.submitForm(invalidUser.username, invalidUser.password);
 
-    await t.expect(LoginPage.errorMessage.exists).ok();
-    await t.expect(LoginPage.errorMessage.innerText).contains('Username and password do not match any user in this service');
+    await t
+      .expect(LoginPage.errorMessage.exists).ok()
+      .expect(LoginPage.errorMessage.visible).ok()
+      .expect(LoginPage.errorMessage.innerText).contains('Username and password do not match any user in this service');
 
 	});
 

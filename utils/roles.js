@@ -5,8 +5,8 @@ import { environment } from '../environments/environment';
 
 export const standardUserRole = Role(environment.pageUrl, async t => {
   await LoginPage.submitForm(standardUser.username, standardUser.password);
-});
+}, { preserveUrl: true });
 
 export const lockedOutUserRole = Role(environment.pageUrl, async t => {
   await LoginPage.submitForm(lockedOutUser.username, lockedOutUser.password);
-});
+}, { preserveUrl: true });
