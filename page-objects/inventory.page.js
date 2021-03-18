@@ -11,6 +11,17 @@ class InventoryPage {
     await t.click(addToCartButton);
   }
 
+  async addMultipleInventoryItemsToShoppingCart(quantity) {
+    const itemsAdded = [];
+    for (let i = 0; i < quantity; i++) {
+      const item = this.inventoryList.nth(i);
+      await this.addInventoryItemToShoppingCart(item);
+      itemsAdded.push(item);
+    }
+
+    return itemsAdded;
+  }
+
   async getAnyInventoryItem() {
     const randomIndex = Math.floor(Math.random() * await this.inventoryList.count);
     return this.inventoryList.nth(randomIndex);
