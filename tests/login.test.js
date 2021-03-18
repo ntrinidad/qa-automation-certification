@@ -14,11 +14,8 @@ fixture('Login testing')
 
 	});
 
-  test.only('Login with an standard user credentials', async t => {
+  test.only('Login with a standard user credentials', async t => {
     await LoginPage.submitForm(standardUser.username, standardUser.password);
     await t
       .expect(InventoryPage.pageTitle.exists).ok();
   });
-
-
-
