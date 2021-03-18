@@ -1,0 +1,23 @@
+{
+  "name": "qa-automation-certification-frontend",
+  "version": "1.0.0",
+  "description": "QA Automation Certification - Frontend - TestCafe",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ntrinidad/qa-automation-certification-frontend.git"
+  },
+  "author": "Norma Trinidad",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ntrinidad/qa-automation-certification-frontend/issues"
+  },
+  "homepage": "https://github.com/ntrinidad/qa-automation-certification-frontend#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "testcafe": "^1.12.0"
+  }
+}
